@@ -79,10 +79,10 @@ window.onload = function() {
 </head>   
 <body>
 
-<h1>Cascading Dropdown Example</h1>
-
+<section>
+<div class="bg">Red</div>
 <form name="form1" id="form1" action="/action_page.php">
-Subjects: <select name="subject" id="subject">
+Subjects: <select class="selectColor" onchange="changeColor(this)" name="subject" id="subject">
     <option value="" selected="selected">Select State</option>
   </select>
   <br><br>
@@ -96,6 +96,8 @@ Chapters: <select name="chapter" id="chapter">
   <br><br>
   <input type="submit" value="Submit">  
 </form>
+  
+  </section>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
@@ -145,5 +147,14 @@ section {
 }
 
   </style>
+  <script>
+          function changeColor(getColor) {
+        let bg = document.querySelector('.bg');
+        let selectColor = getColor.value;
+        let text = getColor.options[getColor.selectedIndex].text;
+        bg.style.background = selectColor;
+        bg.innerHTML = text;
+      }
+  </script>
 </body>
 </html>
