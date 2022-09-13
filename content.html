@@ -1,6 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Montserrat:wght@700&family=Nosifer&family=Oswald:wght@400;600&family=Roboto:wght@100;300&family=Rubik+Glitch&display=swap');
+body{
+   margin: 0;
+}
+*{
+    box-sizing: border-box;
+
+}
+.main{
+    margin: 0;
+    justify-content: center;
+    height: 45rem;
+    background-color: blueviolet; /* For browsers that do not support gradients */
+    background-image: linear-gradient(170deg, blueviolet 0%, blueviolet 60%, white 60.1%);
+
+}
+.rightimage{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    float: right;
+    margin: 2% 10px 0px 0px;
+}
+.rightimage img{
+    margin-left: 15%;
+    border: 2px solid white;
+
+}
+.lefttext{
+    width: 40%;
+    height: 70%;
+    justify-content: center;
+    display:flex;
+    float: left ;   
+    margin: 2% 0px 0px 5%;
+    text-align: center;
+    overflow: hidden;
+}
+.lefttext .textwrap{
+    margin: 25% 10px 0px 0px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.lefttext .textwrap h1{
+    width: 100%;
+    overflow-wrap: break-word;
+    font-size: 50px;
+    font-family: 'Nosifer', cursive;
+    padding: 0;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin: 0 ;
+}
+.lefttext .textwrap p{
+    margin: 0px 20px 0px 20px;
+    font-size: 20px;
+    font-family: 'Oswald', cursive;
+    padding: 0;
+    color: whitesmoke;
+    justify-content: center;
+    text-align: center;
+}
+.lefttext .textwrap button{
+    font-size: 30px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: skyblue;
+    font-family: 'Oswald', cursive;
+    justify-content: center;
+    text-align: center;
+}
+.lefttext .textwrap button:hover{
+    color: rgb(255, 12, 126);
+    background-color: #F7DBF0;
+    border: 2px solid black;
+}
+#navicon{
+    margin-left: 100px;
+    font-size: 20px;
+}
+.aboutus .leftaboutus{
+    text-align: center;
+    float: left;
+}
+
+@media screen and (max-width: 600px) {
+    .lefttext{
+
+        padding: 0;
+        display: flex;
+        width: 100%;
+        margin-top: -10%;
+    }
+    .rightimage{
+        display: flex;
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+    </style>
+  </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
 var subjectObject = {
@@ -78,8 +188,9 @@ window.onload = function() {
 </script>
 </head>   
 <body>
-
-<h1>Information</h1>
+  <div class="lefttext">
+            <div class="textwrap">
+           <h1>Information</h1>
 
 <form name="form1" id="form1" action="/action_page.php">
 Subjects: <select name="State" id="subject">
@@ -96,6 +207,16 @@ Chapters: <select name="Name" id="chapter">
   <br><br>
  
 </form>
+            </div>
+            
+
+        </div>
+        <div class="rightimage">
+            <img src="https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg">
+        </div>
+    </div>
+
+
 
 </body>
 </html>
